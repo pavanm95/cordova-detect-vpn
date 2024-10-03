@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-detect-vpn",
+  "version": "1.0.0",
+  "description": "This is cordova plugin to detect vpn enabled",
+  "cordova": {
+    "id": "cordova-plugin-detect-vpn",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Pavan Madusha",
+  "license": "ISC"
+}

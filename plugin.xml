@@ -1,0 +1,26 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-detect-vpn"
+        version="1.0.0">
+  
+    <name>DetectVPN</name>
+    <description>Detect if a VPN is enabled</description>
+
+    <js-module src="www/DetectVPN.js" name="DetectVPN">
+        <clobbers target="DetectVPN" />
+    </js-module>
+
+    <!-- Android Platform -->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="DetectVPN">
+                <param name="android-package" value="com.example.detectvpn.DetectVPN" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/DetectVPN.java" target-dir="src/com/example/detectvpn" />
+    </platform>
+
+    <!-- iOS Platform -->
+    <platform name="ios">
+        <source-file src="src/ios/DetectVPN.m" />
+    </platform>
+</plugin>
