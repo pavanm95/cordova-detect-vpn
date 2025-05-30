@@ -12,15 +12,15 @@ public class DetectVPN extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("isVpnEnabled")) {
-            boolean vpnEnabled = isVpnEnabled();
+        if (action.equals("isVPNConnected")) {
+            boolean vpnEnabled = isVPNConnected();
             callbackContext.success(vpnEnabled ? 1 : 0); // send 1 if VPN is enabled, 0 otherwise
             return true;
         }
         return false;
     }
 
-    private boolean isVpnEnabled() {
+    private boolean isVPNConnected() {
         try {
             for (NetworkInterface networkInterface : Collections.list(NetworkInterface.getNetworkInterfaces())) {
                 if (networkInterface.isUp() && networkInterface.getInterfaceAddresses().size() > 0) {

@@ -18,9 +18,4 @@
         </config-file>
         <source-file src="src/android/DetectVPN.java" target-dir="src/com/example/detectvpn" />
     </platform>
-
-    <!-- iOS Platform -->
-    <platform name="ios">
-        <source-file src="src/ios/DetectVPN.m" />
-    </platform>
 </plugin>

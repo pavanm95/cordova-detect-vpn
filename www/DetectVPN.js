@@ -1,7 +1,7 @@
 /* global cordova, module */
 
 module.exports = {
-    isVpnEnabled: function(successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "DetectVPN", "isVpnEnabled", []);
+    isVPNConnected: function(successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "DetectVPN", "isVPNConnected", []);
     }
 };
